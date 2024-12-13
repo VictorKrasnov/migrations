@@ -70,7 +70,7 @@ class DiffGenerator
             ! method_exists($this->schemaManager, 'getSchemaSearchPaths')
             && $this->platform->supportsSchemas()
         ) {
-            $defaultNamespace = $toSchema->getName();
+            $defaultNamespace = $toSchema->getNamespaceName();
             if ($defaultNamespace !== '') {
                 $toSchema->createNamespace($defaultNamespace);
             }
